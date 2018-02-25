@@ -1,0 +1,14 @@
+{
+    "plugins": [
+      "transform-strict-mode",
+      "transform-object-rest-spread",
+      "transform-class-properties"
+    ],
+    "presets": [
+        ["env", {
+          "targets": {
+            "node": "5.12.0"
+          }
+        }]
+    ]
+}
