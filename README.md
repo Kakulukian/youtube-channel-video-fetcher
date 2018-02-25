@@ -24,7 +24,7 @@ const YoutubeChannel = new YoutubeChannel('channelId');
 const scrapeChannel = (continuation) => {
     return new Promise((resolve, reject) => {
         YoutubeChannel.getVideo(continuation).then(function(videos) {
-            if(videos.continuation !== 0) {
+            if(videos.continuation) {
                 resolve(scrapeChannel(videos.continuation));
             }
             console.log(posts);
@@ -35,7 +35,7 @@ scrapeChannel();
 ```
 
 ## More examples in async/await
-To see more examples, click [here](https://github.com/Kakulukian/node-jeuxvideo-bot-api/blob/master/example/README.md)
+To see more examples, click [here](https://github.com/Kakulukian/youtube-channel-video-fetcher/blob/master/example/)
 
 ## Configuration
 | Param | Type | Default | Description |
